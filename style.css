@@ -1,0 +1,34 @@
+.weatherApp {
+  border-radius: 25px;
+  border: 1px solid black;
+  background-color: peru;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+#current-temperature {
+  text-align: right;
+  right: 1%;
+}
+
+h1 {
+  padding-bottom: 30px;
+}
+input {
+  border-radius: 10px;
+  border-color: black;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+
+.go {
+  background-color: rgb(235, 160, 86);
+}
+
+.h3 {
+  padding-top: 15px;
+}
+
+.weekForecast {
+  display: inline;
+}
