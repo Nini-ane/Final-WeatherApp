@@ -1,3 +1,7 @@
+body {
+  background-color: rgb(241, 177, 112);
+}
+
 .weatherApp {
   border-radius: 25px;
   border: 1px solid black;
@@ -9,10 +13,24 @@
   margin: 50px auto;
 }
 
-#current-temperature {
+a {
+  text-decoration: none;
+  color: black;
+}
+
+#main-temperature {
   text-align: right;
   right: 1%;
   font-size: 40pt;
+}
+
+#current-atmosphere {
+  text-transform: capitalize;
+}
+
+#weather-icon {
+  line-height: 1.5cm;
+  text-align: center;
 }
 
 h1 {
@@ -21,11 +39,11 @@ h1 {
 
 #current-date {
   font-size: 20pt;
-  margin-bottom: 5px;
+  margin-bottom: 0px;
 }
 
 #current-atmosphere {
-  margin: 5px 0px 30px 0px;
+  margin: 0px 0px 30px 0px;
   font-size: 15pt;
 }
 
