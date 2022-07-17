@@ -2,6 +2,12 @@ body {
   background-color: rgb(241, 177, 112);
 }
 
+ul {
+  list-style: none;
+  text-align: left;
+  padding-left: 0rem;
+}
+
 .weatherApp {
   border-radius: 25px;
   border: 1px solid black;
@@ -10,7 +16,7 @@ body {
   padding-left: 50px;
   padding-right: 50px;
   max-width: 600px;
-  margin: 50px auto;
+  margin: 100px auto;
 }
 
 a {
@@ -22,10 +28,6 @@ a {
   text-align: right;
   right: 1%;
   font-size: 40pt;
-}
-
-#current-atmosphere {
-  text-transform: capitalize;
 }
 
 #weather-icon {
@@ -43,7 +45,7 @@ h1 {
 }
 
 #current-atmosphere {
-  margin: 0px 0px 30px 0px;
+  text-transform: capitalize;
   font-size: 15pt;
 }
 
