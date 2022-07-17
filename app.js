@@ -39,6 +39,10 @@ function showWeather(response) {
   currentTemp.innerHTML = Math.round(response.data.main.temp) + "°C";
   let description = document.querySelector("#current-atmosphere");
   description.innerHTML = response.data.weather[0].description;
+  let humidity = document.querySelector("#current-humidity");
+  humidity.innerHTML = response.data.main.humidity;
+  let currentWind = document.querySelector("#wind");
+  currentWind.innerHTML = Math.round(response.data.wind.speed);
 }
 
 function getTemperature(event) {
