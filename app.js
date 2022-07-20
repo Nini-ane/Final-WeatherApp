@@ -43,6 +43,8 @@ function showWeather(response) {
   humidity.innerHTML = response.data.main.humidity;
   let currentWind = document.querySelector("#wind");
   currentWind.innerHTML = Math.round(response.data.wind.speed);
+  let iconElement = document.querySelector("#weather-icon");
+  iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 }
 
 function getTemperature(event) {
