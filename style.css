@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(164, 190, 238);
+  background-color: rgb(146, 166, 202);
 }
 
 ul {
@@ -29,6 +29,12 @@ a {
   text-align: right;
   right: 1%;
   font-size: 40pt;
+}
+
+#units {
+  position: relative;
+  font-size: 16pt;
+  top: -22px;
 }
 
 #weather-icon {
