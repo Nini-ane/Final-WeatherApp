@@ -35,8 +35,9 @@ cityInput.addEventListener("submit", changeCity);
 
 function showWeather(response) {
   console.log(response);
+  celsiusTemperature = response.data.main.temp;
   let currentTemp = document.querySelector("#current-temp");
-  currentTemp.innerHTML = Math.round(response.data.main.temp) + "°C";
+  currentTemp.innerHTML = Math.round(response.data.main.temp);
   let description = document.querySelector("#current-atmosphere");
   description.innerHTML = response.data.weather[0].description;
   let humidity = document.querySelector("#current-humidity");
@@ -56,3 +57,28 @@ function getTemperature(event) {
 }
 
 cityInput.addEventListener("submit", getTemperature);
+
+function showFahrenheitTemperature(event) {
+  event.preventDefault();
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheitTemperature = (celsiusTemperature * 9 / 5 + 32);
+  let temperatureElement = document.querySelector("#current-temp");
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature); 
+}
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", showFahrenheitTemperature); 
+
+function showCelsiusTemperature(event) {
+  event.preventDefault();
+  fahrenheitLink.classList.remove("active");
+  celsiusLink.classList.add("active");
+  let temperatureElement = document.querySelector("#current-temp");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature); 
+}
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", showCelsiusTemperature);
+
+let celsiusTemperature = null;
