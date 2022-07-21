@@ -21,25 +21,31 @@ ul {
   margin: 100px auto;
 }
 
+#target-city {
+  font-family: American Typewriter;
+}
+
 a {
   text-decoration: none;
-  color: rgb(55, 93, 163);
+  color: rgb(94, 92, 92);
 }
 
 #main-temperature {
   text-align: right;
   right: 1%;
   font-size: 40pt;
+  font-family: American Typewriter;
 }
 
 #units {
   position: relative;
-  font-size: 16pt;
+  font-size: 15pt;
   top: -22px;
 }
 
 .active {
   color: black;
+  font-style: bolder;
 }
 
 #weather-icon {
@@ -54,7 +60,7 @@ h1 {
 }
 
 #current-date {
-  font-size: 20pt;
+  font-size: 18pt;
   margin-bottom: 0px;
 }
 
@@ -81,6 +87,22 @@ input {
   text-align: center;
 }
 
+.forecastDays {
+  border: 2px solid rgb(94, 92, 92);
+  border-radius: 10px;
+  margin-right: 3%;
+  background-color: rgb(146, 166, 202);
+  background-image: linear-gradient(
+    to right,
+    rgb(125, 146, 184),
+    rgb(165, 187, 230)
+  );
+}
+
+strong {
+  font-family: American Typewriter;
+}
+
 #icon-day-one,
 #icon-day-two,
 #icon-day-three,
@@ -90,7 +112,7 @@ input {
 }
 
 .minimum {
-  color: rgb(95, 93, 93);
+  color: rgb(94, 92, 92);
 }
 
 .contact {

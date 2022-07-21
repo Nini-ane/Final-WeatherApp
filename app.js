@@ -63,7 +63,7 @@ let forecastElement = document.querySelector("#forecast");
 let forecastHtml = `<div class="row">`;
 let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
 days.forEach(function (day) {
-  forecastHtml = forecastHtml + `<div class="firstDay col-2">
+  forecastHtml = forecastHtml + `<div class="forecastDays col-2">
              <span id="day-one">
                 <img src="media/partly-cloudy.png" id="icon-day-one">
                 <br />
