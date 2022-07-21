@@ -1,5 +1,6 @@
 body {
   background-color: rgb(146, 166, 202);
+  font-family: sans-serif;
 }
 
 ul {
@@ -75,12 +76,21 @@ input {
 
 .weekForecast {
   display: block;
-  margin-top: 0px auto;
+  margin: 0px auto;
   font-size: 12pt;
   text-align: center;
-  padding: 25px;
-  margin-left: 40px;
-  margin-right: 40px;
+}
+
+#icon-day-one,
+#icon-day-two,
+#icon-day-three,
+#icon-day-four,
+#icon-day-five {
+  max-width: 80%;
+}
+
+.minimum {
+  color: rgb(95, 93, 93);
 }
 
 .contact {
