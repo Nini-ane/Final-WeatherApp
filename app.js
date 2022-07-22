@@ -46,6 +46,8 @@ function showWeather(response) {
   currentWind.innerHTML = Math.round(response.data.wind.speed);
   let iconElement = document.querySelector("#weather-icon");
   iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+
+  getForecast(response.data.coord);
 }
 
 function getTemperature(event) {
@@ -58,25 +60,45 @@ function getTemperature(event) {
 
 cityInput.addEventListener("submit", getTemperature);
 
-function displayForecast() {
+
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "0225b3f0fd22f80ae48c36b7041e70ff";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[day];
+}
+
+function displayForecast(response) {
+let forecast = response.data.daily;
+
 let forecastElement = document.querySelector("#forecast");
+
 let forecastHtml = `<div class="row">`;
-let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
-days.forEach(function (day) {
+
+forecast.forEach(function (forecastDay, index) {
+  if (index < 5) {
   forecastHtml = forecastHtml + `<div class="forecastDays col-2">
              <span id="day-one">
-                <img src="media/partly-cloudy.png" id="icon-day-one">
+                <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" width="42" id="icon-day-one"/>
                 <br />
-                <strong>${day}</strong>
+                <strong>${formatDay(forecastDay.dt)}</strong>
                  <br>
-                    17° <span class="minimum"> 10°</span>
+                    ${Math.round(forecastDay.temp.max)}° <span class="minimum"> ${Math.round(forecastDay.temp.min)}°</span>
                 </span>
-            </div>`;});
+            </div>`;}});
 forecastHtml = forecastHtml + `</div>`;
+
 forecastElement.innerHTML = forecastHtml;
 }
 
-displayForecast();
 
 function showFahrenheitTemperature(event) {
   event.preventDefault();
