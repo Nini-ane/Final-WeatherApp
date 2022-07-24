@@ -1,6 +1,8 @@
 body {
   background-color: rgb(146, 166, 202);
   font-family: sans-serif;
+  background-image: url("media/abstract-acrylic.jpg");
+  background-size: 130%;
 }
 
 ul {
@@ -11,9 +13,13 @@ ul {
 
 .weatherApp {
   border-radius: 25px;
-  border: 3px solid black;
+  border: 5px solid black;
   background-color: peru;
-  background-image: linear-gradient(to left, rgb(238, 187, 124), peru);
+  background-image: linear-gradient(
+    to left,
+    rgb(250, 211, 162),
+    rgb(244, 151, 12)
+  );
   padding: 20px;
   padding-left: 50px;
   padding-right: 50px;
@@ -58,10 +64,12 @@ a {
 h1 {
   padding-bottom: 0px;
   font-size: 40pt;
+  color: rgb(1, 60, 102);
 }
 
 #current-date {
-  font-size: 18pt;
+  margin-top: 0px;
+  font-size: 15pt;
   margin-bottom: 0px;
 }
 
@@ -78,7 +86,7 @@ input {
 }
 
 .go {
-  background-color: rgb(235, 160, 86);
+  background-color: rgb(250, 140, 36);
 }
 
 .weekForecast {
@@ -89,15 +97,16 @@ input {
 }
 
 .forecastDays {
-  border: 2px solid rgb(94, 92, 92);
+  border: 3px solid rgb(0, 78, 133);
   border-radius: 10px;
   margin-right: 3%;
   background-color: rgb(146, 166, 202);
   background-image: linear-gradient(
     to right,
-    rgb(125, 146, 184),
-    rgb(165, 187, 230)
+    rgb(19, 116, 177),
+    rgb(151, 180, 238)
   );
+  opacity: 0.9;
 }
 
 strong {
@@ -113,7 +122,7 @@ strong {
 }
 
 .minimum {
-  color: rgb(94, 92, 92);
+  color: rgb(1, 61, 104);
 }
 
 .contact {
