@@ -18,13 +18,14 @@ ul {
   background-image: linear-gradient(
     to left,
     rgb(250, 211, 162),
-    rgb(244, 151, 12)
+    rgba(247, 148, 0, 0.904)
   );
   padding: 20px;
   padding-left: 50px;
   padding-right: 50px;
   max-width: 600px;
   margin: 100px auto;
+  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.1);
 }
 
 #target-city {
@@ -42,6 +43,7 @@ a {
   right: 1%;
   font-size: 40pt;
   font-family: American Typewriter;
+  text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.1);
 }
 
 #units {
@@ -83,6 +85,7 @@ input {
   border-color: black;
   padding: 5px;
   margin-bottom: 50px;
+  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.1);
 }
 
 .go {
@@ -97,7 +100,8 @@ input {
 }
 
 .forecastDays {
-  border: 3px solid rgb(0, 78, 133);
+  border: 2px solid black;
+  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   margin-right: 3%;
   background-color: rgb(146, 166, 202);
