@@ -29,7 +29,6 @@ function changeCity(event) {
   document.querySelector("#target-city").innerHTML = city.value;
 }
 
-
 let cityInput = document.querySelector("#city");
 cityInput.addEventListener("submit", changeCity);
 
@@ -49,6 +48,14 @@ function showWeather(response) {
 
   getForecast(response.data.coord);
 }
+
+function displayInitialTemperature() {
+  let apiKey = "0225b3f0fd22f80ae48c36b7041e70ff";
+  let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=Berlin&appid=${apiKey}&units=metric`;
+  axios.get(apiURL).then(showWeather);
+}
+
+displayInitialTemperature();
 
 function getTemperature(event) {
   event.preventDefault();
@@ -91,7 +98,7 @@ forecast.forEach(function (forecastDay, index) {
                 <br />
                 <strong>${formatDay(forecastDay.dt)}</strong>
                  <br>
-                    ${Math.round(forecastDay.temp.max)}° <span class="minimum"> ${Math.round(forecastDay.temp.min)}°</span>
+                    ${Math.round(forecastDay.temp.max)}°C <span class="minimum"> ${Math.round(forecastDay.temp.min)}°C</span>
                 </span>
             </div>`;}});
 forecastHtml = forecastHtml + `</div>`;

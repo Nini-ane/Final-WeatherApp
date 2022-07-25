@@ -117,6 +117,7 @@ strong {
     rgb(151, 180, 238)
   );
   opacity: 0.9;
+  padding: 5px;
 }
 
 #icon-day-one,
@@ -129,6 +130,7 @@ strong {
 
 .minimum {
   color: rgb(1, 61, 104);
+  font-size: 11pt;
 }
 
 .contact {
